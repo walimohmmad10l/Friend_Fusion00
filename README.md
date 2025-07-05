@@ -1,102 +1,93 @@
-Friend Fusion - A Full-Stack Social Media Application
+# Friend Fusion - A Full-Stack Social Media Application
+
 Friend Fusion is a comprehensive full-stack social media application built to showcase modern web development practices using the MERN stack (MySQL, Express, React, Node.js). This project serves as a portfolio piece demonstrating skills in backend API development, dynamic frontend user interfaces, and database management. It is a fully functional platform designed with a focus on user interaction and real-time updates.
 
-✨ Core Features
-Secure User Authentication: Robust user registration and login system implemented with JSON Web Tokens (JWT) for secure, stateless authentication.
 
-Dynamic Post Feed: A real-time timeline displaying posts from followed users, allowing for content discovery.
+## ✨ Core Features
 
-Post & Content Management: Users can create text-based posts, upload images, and manage their own content.
+- **Secure User Authentication**: Robust user registration and login system implemented with JSON Web Tokens (JWT) for secure, stateless authentication.
+- **Dynamic Post Feed**: A real-time timeline displaying posts from followed users, allowing for content discovery.
+- **Post & Content Management**: Users can create text-based posts, upload images, and manage their own content.
+- **Real-Time Social Interactions**: Functionality to like/unlike posts and engage in discussions through a comment system.
+- **Customizable User Profiles**: Users can view and update their profiles, including cover photos, profile pictures, and personal details.
+- **Follow/Unfollow System**: A social graph where users can follow and unfollow others to curate their content feed.
+- **Efficient Data Handling**: Leverages React Query for optimized client-side data fetching, caching, and state synchronization.
+- **Modern UI/UX**: Features a responsive design with a switchable Dark/Light mode for enhanced user experience.
 
-Real-Time Social Interactions: Functionality to like/unlike posts and engage in discussions through a comment system.
+## 🛠️ Tech Stack
 
-Customizable User Profiles: Users can view and update their profiles, including cover photos, profile pictures, and personal details.
+- **Frontend**: React, React Router, Context API, Sass
+- **State Management**: React Query for server state, Context API for UI state.
+- **Backend**: Node.js, Express.js
+- **Database**: MySQL
+- **API & Data**: RESTful API, Axios for HTTP requests
+- **Authentication**: JSON Web Tokens (JWT), bcrypt.js for password hashing, Cookie-Parser
 
-Follow/Unfollow System: A social graph where users can follow and unfollow others to curate their content feed.
+## 🚀 Getting Started
 
-Efficient Data Handling: Leverages React Query for optimized client-side data fetching, caching, and state synchronization.
-
-Modern UI/UX: Features a responsive design with a switchable Dark/Light mode for enhanced user experience.
-
-🛠️ Tech Stack
-Frontend: React, React Router, Context API, Sass
-
-State Management: React Query for server state, Context API for UI state.
-
-Backend: Node.js, Express.js
-
-Database: MySQL
-
-API & Data: RESTful API, Axios for HTTP requests
-
-Authentication: JSON Web Tokens (JWT), bcrypt.js for password hashing, Cookie-Parser
-
-🚀 Getting Started
 To get a local copy up and running, follow these simple steps.
 
-Prerequisites
+### Prerequisites
+
 Make sure you have the following software installed on your machine:
+- [Node.js](https://nodejs.org/) (which includes npm)
+- [MySQL Server](https://dev.mysql.com/downloads/mysql/)
 
-Node.js (which includes npm)
+### Installation
 
-MySQL Server
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/walimohmmad10l/Friend_Fusion00.git
+    cd Friend_Fusion00
+    ```
 
-Installation
-Clone the repository
+2.  **Set up the Backend (API)**
+    - Navigate to the `api` directory and install dependencies.
+      ```bash
+      cd api
+      npm install
+      ```
+    - Create a `.env` file in the `api` directory and add your database credentials.
+      ```env
+      DB_HOST=localhost
+      DB_USER=your_mysql_username
+      DB_PASSWORD=your_mysql_password
+      DB_NAME=social
+      JWT_SECRET=your_super_secret_key
+      ```
 
-bash
-git clone https://github.com/walimohmmad10l/Friend_Fusion00.git
-cd Friend_Fusion00
-Set up the Backend (API)
+3.  **Set up the Database**
+    - Connect to your MySQL server (e.g., using MySQL Workbench or another client).
+    - Execute the `schema.sql` script located in the `api` folder. This will create the `social` database and all necessary tables.
 
-Navigate to the api directory and install dependencies.
+4.  **Set up the Frontend (Client)**
+    - From the root directory, navigate to the `client` folder and install dependencies.
+      ```bash
+      cd ../client
+      npm install
+      ```
 
-bash
-cd api
-npm install
-Create a .env file in the api directory and add your database credentials.
+### Running the Application
 
-text
-DB_HOST=localhost
-DB_USER=your_mysql_username
-DB_PASSWORD=your_mysql_password
-DB_NAME=social
-JWT_SECRET=your_super_secret_key
-Set up the Database
+1.  **Start the Backend Server**
+    - In the `api` directory, run:
+      ```bash
+      npm start
+      ```
+    - The API server will start on `http://localhost:8800`.
 
-Connect to your MySQL server (e.g., using MySQL Workbench or another client).
+2.  **Start the Frontend Application**
+    - In the `client` directory, run:
+      ```bash
+      npm start
+      ```
+    - The application will be accessible at `http://localhost:3000`.
 
-Import the table structure from the api/schema.sql file. This will create the social database and all necessary tables. You can do this via a tool's import feature or by executing the script directly.
+## Database Schema
 
-Set up the Frontend (Client)
+Here is the complete SQL schema used for the database.
 
-From the root directory, navigate to the client folder and install dependencies.
-
-bash
-cd ../client
-npm install
-Running the Application
-Start the Backend Server
-
-In the api directory, run:
-
-bash
-npm start
-The API server will start on http://localhost:8800.
-
-Start the Frontend Application
-
-In the client directory, run:
-
-bash
-npm start
-The application will be accessible at http://localhost:3000.
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
+```sql
 --
 -- Create a new database named 'social' if it doesn't exist
 --
