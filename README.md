@@ -1,7 +1,6 @@
 Friend Fusion - A Full-Stack Social Media Application
 Friend Fusion is a comprehensive full-stack social media application built to showcase modern web development practices using the MERN stack (MySQL, Express, React, Node.js). This project serves as a portfolio piece demonstrating skills in backend API development, dynamic frontend user interfaces, and database management. It is a fully functional platform designed with a focus on user interaction and real-time updates.
 
-
 ✨ Core Features
 Secure User Authentication: Robust user registration and login system implemented with JSON Web Tokens (JWT) for secure, stateless authentication.
 
